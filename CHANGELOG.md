@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.1
+
+### Fixed
+
+- The node icon was drawn in white for the light theme and near-black for the dark theme, so in both
+  cases the largest shape was invisible against the background and the icon appeared tiny. It is now
+  n8n's own SSE Trigger mark encircled by a reconnect loop, with a colour per theme.
+
 ## 1.0.0
 
 Initial release of the **Resilient SSE Trigger** node, which starts an n8n workflow from a

@@ -22,7 +22,7 @@ To install an unpublished local build instead, build a tarball with `npm pack` a
 
 ```sh
 mkdir -p ~/.n8n/nodes && cd ~/.n8n/nodes
-npm install --omit=peer /path/to/n8n-nodes-resilient-sse-1.0.0.tgz
+npm install --omit=peer /path/to/n8n-nodes-resilient-sse-1.0.1.tgz
 ```
 
 Then restart n8n. `--omit=peer` matters: without it npm tries to install the `n8n-workflow` peer dependency, which pulls in `isolated-vm` and fails compiling native code. n8n provides `n8n-workflow` itself.
@@ -134,6 +134,10 @@ Be aware of the cost: n8n starts a **separate workflow execution per emitted ite
 * [SSE specification (WHATWG)](https://html.spec.whatwg.org/multipage/server-sent-events.html)
 
 ## Version history
+
+### 1.0.1
+
+Fixed the node icon, which was previously invisible against both the light and dark themes.
 
 ### 1.0.0
 

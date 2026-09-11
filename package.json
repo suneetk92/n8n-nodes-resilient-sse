@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-resilient-sse",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "An n8n trigger node that consumes Server-Sent Events with authentication, custom headers, and a configurable reconnect and backoff strategy",
 	"license": "MIT",
 	"homepage": "https://github.com/suneetk92/n8n-nodes-resilient-sse",
