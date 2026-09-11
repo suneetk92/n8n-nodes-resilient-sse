@@ -1,0 +1,55 @@
+{
+	"name": "n8n-nodes-resilient-sse",
+	"version": "1.0.0",
+	"description": "An n8n trigger node that consumes Server-Sent Events with authentication, custom headers, and a configurable reconnect and backoff strategy",
+	"license": "MIT",
+	"homepage": "https://github.com/suneetk92/n8n-nodes-resilient-sse",
+	"keywords": [
+		"n8n-community-node-package"
+	],
+	"author": {
+		"name": "Suneet Kumar",
+		"email": "suneetk92@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/suneetk92/n8n-nodes-resilient-sse.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist",
+		"!dist/tsconfig.tsbuildinfo"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/SseBearerApi.credentials.js",
+			"dist/credentials/SseHeaderApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/ResilientSseTrigger/ResilientSseTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
